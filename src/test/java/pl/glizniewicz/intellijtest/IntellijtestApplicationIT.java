@@ -6,12 +6,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Class name ending with 'Tests', matching the default
- * <a href="https://maven.apache.org/surefire/maven-surefire-plugin/test-mojo.html#includes">Surefire Plugin</a>
+ * Class name ending with 'IT', matching the default
+ * <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/integration-test-mojo.html#includes">Failsafe Plugin</a>
  * configuration.
  */
 @SpringBootTest
-class IntellijtestApplicationTests {
+public class IntellijtestApplicationIT {
 
     @Test
     void contextLoads() {
@@ -21,7 +21,6 @@ class IntellijtestApplicationTests {
         assertThat(System.getProperty("testProperty"))
 
                 // then
-                .isEqualTo("surefire");
+                .isEqualTo("failsafe");
     }
-
 }
